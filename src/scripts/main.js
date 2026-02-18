@@ -5,7 +5,9 @@ const promise1 = new Promise((resolve) => {
   const logo = document.querySelector('.logo');
 
   logo.addEventListener('click', () => {
-    resolve();
+    if (logo) {
+      resolve();
+    }
   });
 });
 
@@ -32,5 +34,5 @@ function rejectMessage() {
   document.body.appendChild(div);
 }
 
-promise1.then(successMessage);
-promise2.catch(rejectMessage);
+promise1.then(successMessage).catch(rejectMessage);
+promise2.then(successMessage).catch(rejectMessage);
