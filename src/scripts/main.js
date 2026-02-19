@@ -5,9 +5,7 @@ const promise1 = new Promise((resolve) => {
   const logo = document.querySelector('.logo');
 
   logo.addEventListener('click', () => {
-    if (logo) {
-      resolve();
-    }
+    resolve();
   });
 });
 
